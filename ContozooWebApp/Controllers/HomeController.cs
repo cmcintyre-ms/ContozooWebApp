@@ -23,6 +23,11 @@ namespace ContozooWebApp.Controllers
             return View();
         }
 
+        public IActionResult Animals()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
