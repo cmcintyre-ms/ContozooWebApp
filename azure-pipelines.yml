@@ -59,4 +59,5 @@ stages:
       inputs:
         ConnectionType: 'PublishProfile'
         PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/*.pubxml'
+        PublishProfilePassword: 'Pa$$w0rd1234'
         packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
