@@ -54,10 +54,11 @@ stages:
         buildType: 'current'
         downloadType: 'single'
         downloadPath: '$(System.ArtifactsDirectory)'
+        artifactName: 'drop'
         
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'PublishProfile'
-        PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/*.pubxml'
+        PublishProfilePath: '$(System.ArtifactDirectory)/**/*.pubxml' 
         PublishProfilePassword: 'Pa$$w0rd1234'
-        packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+        packageForLinux: '$(System.ArtificatDirectory)/**/*.zip'
