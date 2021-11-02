@@ -57,8 +57,6 @@ stages:
         artifactName: 'drop'
     - task: AzureRmWebAppDeployment@4
       inputs:
-        ConnectionType: 'AzureRM'
-        azureSubscription: 'Visual Studio Enterprise Subscription(76249d2c-9c3c-4e6e-8265-c858f603bf32)'
-        appType: 'webApp'
-        WebAppName: 'ContozooApp'
+        ConnectionType: 'PublishProfile'
+        PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/*.pubxml'
         packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
